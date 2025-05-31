@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dictionary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Title -->
+    <h1>📚LexiFind</h1>
+
+    <!-- Search Section: Input, Search Button, Microphone Button -->
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <input type="text" id="searchInput" placeholder="Type or speak a word..." />
+      <button id="searchBtn">Search</button>
+      <button id="micBtn" title="Speak now">🎙</button>
+    </div>
+
+    <!-- Word Information Section (Initially hidden) -->
+    <div id="wordInfo" class="hidden">
+      <h2 id="wordTitle"></h2>
+      <p id="phonetics"></p>
+      <button id="playSound">🔊</button>
+
+      <!-- Definitions -->
+      <div id="definitions"></div>
+
+      <!-- Examples -->
+      <div id="examples"></div>
+
+      <!-- Related Images -->
+      <div id="relatedImages"></div>
+
+      <!-- Synonyms and Antonyms -->
+      <div id="synonyms"></div>
+      <div id="antonyms"></div>
+
+      <!-- Translation Section -->
+      <div>
+        <label for="languageSelect">Translate to:</label>
+        <select id="languageSelect">
+          <option value="">--Select--</option>
+          <option value="kn">Kannada</option>
+          <option value="hi">Hindi</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="bn">Bengali</option>
+          <option value="ml">Malayalam</option>
+          <option value="mr">Marathi</option>
+          <option value="gu">Gujarati</option>
+          <option value="pa">Punjabi</option>
+          <option value="ur">Urdu</option>
+        </select>
+      </div>
+
+      <!-- Translation Output -->
+      <div id="translation"></div>
+    </div>
+
+    <!-- Settings Section -->
+    <button id="settingsBtn">⚙️ Settings</button>
+    <div id="settings" class="hidden">
+      <h3>Settings</h3>
+      <div>
+        <label for="languageSelect">Language Selection:</label>
+        <select id="languageSelectSetting">
+          <option value="">--Select--</option>
+          <option value="kn">Kannada</option>
+          <option value="hi">Hindi</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="bn">Bengali</option>
+          <option value="ml">Malayalam</option>
+          <option value="mr">Marathi</option>
+          <option value="gu">Gujarati</option>
+          <option value="pa">Punjabi</option>
+          <option value="ur">Urdu</option>
+        </select>
+      </div>
+
+      <div>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
+      </div>
+
+      <div>
+        <h4>Search History</h4>
+        <ul id="historyList"></ul>
+        <button id="clearHistoryBtn">Clear History</button>
+      </div>
+    </div>
+
+    <!-- Search History Section -->
+    <h3>Search History</h3>
+    <ul id="historyList"></ul>
+    <button id="clearHistoryBtn">Clear History</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
